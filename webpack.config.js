@@ -1,9 +1,10 @@
 const path = require('path');
+const WebpackUtil = require('./webpack.util.js');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: WebpackUtil.filesToCompile(),
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   }
-};
+}
