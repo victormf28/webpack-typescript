@@ -1,9 +1,9 @@
 import FilterConcessionaire from './FilterConcessionaire.js'
 
-FilterConcessionaire.init({
+new FilterConcessionaire({
     parent: ".parent-1"
 })
 
-FilterConcessionaire.init({
+new FilterConcessionaire({
     parent: ".parent-2"
 })
