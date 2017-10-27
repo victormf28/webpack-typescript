@@ -5,12 +5,12 @@ const recursiveReadSync = require('recursive-readdir-sync')
 module.exports = {
     filesToCompile(){
         let files = {}
-        recursiveReadSync('./js/modules')
+        recursiveReadSync('./ts/modules')
         .filter(function(file){
-            return /View\.js$/.test(file)
+            return /View\.ts$/.test(file)
         })
         .map(function(file){
-            let nameFile = file.replace(/\/View.js$/, '')
+            let nameFile = file.replace(/\/View.ts$/, '')
             files[nameFile] = './' + file
         })
         return files

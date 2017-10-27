@@ -1,0 +1,18 @@
+{
+   "compilerOptions": {
+      "baseUrl": "./ts",
+      "rootDir": "./ts"
+   },
+   "root": true,
+   "parser": "typescript-eslint-parser",
+   "extends": "tslint:recommended",
+   "rules": {
+      "semicolon": [true, "never"],
+      "quotemark": [true, "single", "avoid-escape"],
+      "member-ordering": false,
+      "no-unused-expression": false
+   },
+   "globals": {
+      "process" : true
+   }
+ }
