@@ -1,23 +1,24 @@
-import * as $ from 'jquery'
-import Sb from './Sb.ts'
-
-export default class FilterConcessionaire {
+export default class ListVersions {
    private dom: any = {}
    private st: any = {}
 
    private defaults: any = {
-      ele: '.ele',
+      ele: '.eleVersion',
       parent: '.parent',
    }
 
    private catchDom() {
       this.dom.parent = $(this.st.parent)
-      this.dom.ele = $(this.st.ele, this.dom.parent)
+      this.dom.ele = $(this.st.ele)
    }
 
    private fn: any = {
       setup: () => {
-         // console.log('Loading List Version ...', this.st.parent)
+         log('Loading List Version ...', this.st.parent)
+
+         setTimeout(() => {
+            Sb.run('FilterConcessionaire:demo', 'probando pubsub', 'lala')
+         }, 2000)
       },
    }
 
@@ -25,9 +26,5 @@ export default class FilterConcessionaire {
       this.st = Object.assign({}, this.defaults, params)
       this.catchDom()
       this.fn.setup()
-
-      setTimeout(() => {
-         Sb.run('FilterConcessionaire:demo', 'probando pubsub', 'lala')
-      }, 2000)
    }
 }

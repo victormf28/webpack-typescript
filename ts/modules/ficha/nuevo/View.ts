@@ -1,5 +1,14 @@
+import bootstrap from './../../../bootstrap'
+
+import AllModules from './../../AllModules'
+import AllController from './../AllController'
+
 import FilterConcessionaire from './FilterConcessionaire'
 import ListVersions from './ListVersions'
+
+bootstrap.load()
+AllModules.load()
+AllController.load()
 
 new FilterConcessionaire({
    parent: '.parent-1',
@@ -10,5 +19,3 @@ new FilterConcessionaire({
 })
 
 new ListVersions()
-// console.log("process.env.NODE_ENV", process.env.NODE_ENV())
-// JSON.parse(process.env.NODE_PATHS)

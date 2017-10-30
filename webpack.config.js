@@ -1,6 +1,8 @@
-const path = require('path');
-const webpack = require('webpack');
-const WebpackUtil = require('./webpack.util.js');
+const path = require('path')
+const WebpackUtil = require('./webpack.util.js')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+console.log('WebpackUtil.filesToCompile()', WebpackUtil.filesToCompile())
 
 module.exports = {
    entry: WebpackUtil.filesToCompile(),
@@ -18,7 +20,7 @@ module.exports = {
             options: {
                error: false,
                parser: 'typescript-eslint-parser'
-             }
+            }
          },
          {
             test: /\.tsx?$/,
@@ -28,15 +30,21 @@ module.exports = {
    },
    resolve: {
       modules: [path.resolve(__dirname, 'ts'), 'node_modules'],
-      extensions: ['.ts'],
+      extensions: ['.ts']
       // alias: {
       //    'utils': path.resolve(__dirname, './webpack.globals')
       //  }
    },
    plugins: [
-      new webpack.ProvidePlugin({
-         $: "jquery",
-         jQuery: "jquery"
+      new HtmlWebpackPlugin({
+         // inject: false,
+         chunks: ['ts/modules/ficha/nuevo'],
+         filename: 'apps/page1/build/index.html'
+      }),
+      new HtmlWebpackPlugin({
+         // inject: false,
+         chunks: ['ts/modules/ficha/usado'],
+         filename: 'apps/page2/build/index.html'
       })
-   ]  
+   ]
 }
