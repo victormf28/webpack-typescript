@@ -1,41 +1,45 @@
 {
-  "name": "web-pack",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "watch": "webpack --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://gitlab.com/victormorales28/web-pack.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/victormorales28/web-pack/issues"
-  },
-  "homepage": "https://gitlab.com/victormorales28/web-pack#README",
-  "dependencies": {
-    "html-webpack-plugin": "^2.30.1",
-    "imports-loader": "^0.7.1",
-    "jquery": "^3.2.1",
-    "recursive-readdir-sync": "^1.0.6",
-    "ts-loader": "^3.0.5",
-    "typescript": "^2.5.3",
-    "webpack": "^3.8.1"
-  },
-  "devDependencies": {
-    "@types/node": "^8.0.47",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "eslint-plugin-typescript": "^0.8.0",
-    "standard": "^10.0.3",
-    "standard-loader": "^6.0.1",
-    "tslint": "^5.8.0",
-    "tslint-loader": "^3.5.3",
-    "typescript-eslint-parser": "^8.0.1"
-  }
+   "name": "web-pack",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "watch": "webpack --watch"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://gitlab.com/victormorales28/web-pack.git"
+   },
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://gitlab.com/victormorales28/web-pack/issues"
+   },
+   "homepage": "https://gitlab.com/victormorales28/web-pack#README",
+   "dependencies": {
+      "html-webpack-plugin": "^2.30.1",
+      "imports-loader": "^0.7.1",
+      "jquery": "^3.2.1",
+      "pug": "^2.0.0-rc.4",
+      "pug-html-loader": "^1.1.5",
+      "pug-loader": "^2.3.0",
+      "raw-loader": "^0.5.1",
+      "recursive-readdir-sync": "^1.0.6",
+      "ts-loader": "^3.0.5",
+      "typescript": "^2.5.3",
+      "webpack": "^3.8.1"
+   },
+   "devDependencies": {
+      "@types/node": "^8.0.47",
+      "babel-core": "^6.26.0",
+      "babel-loader": "^7.1.2",
+      "babel-plugin-transform-object-rest-spread": "^6.26.0",
+      "babel-preset-env": "^1.6.1",
+      "eslint-plugin-typescript": "^0.8.0",
+      "standard": "^10.0.3",
+      "standard-loader": "^6.0.1",
+      "tslint": "^5.8.0",
+      "tslint-loader": "^3.5.3",
+      "typescript-eslint-parser": "^8.0.1"
+   }
 }

@@ -1,11 +1,9 @@
 const path = require('path')
 const WebpackUtil = require('./webpack.util.js')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-
-console.log('WebpackUtil.filesToCompile()', WebpackUtil.filesToCompile())
+// const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-   entry: WebpackUtil.filesToCompile(),
+   entry: WebpackUtil.filesToCompile('./ts/modules', /\/View\.ts$/),
    output: {
       filename: '[name].js',
       path: path.resolve(__dirname, 'dist')
@@ -31,20 +29,6 @@ module.exports = {
    resolve: {
       modules: [path.resolve(__dirname, 'ts'), 'node_modules'],
       extensions: ['.ts']
-      // alias: {
-      //    'utils': path.resolve(__dirname, './webpack.globals')
-      //  }
    },
-   plugins: [
-      new HtmlWebpackPlugin({
-         // inject: false,
-         chunks: ['ts/modules/ficha/nuevo'],
-         filename: 'apps/page1/build/index.html'
-      }),
-      new HtmlWebpackPlugin({
-         // inject: false,
-         chunks: ['ts/modules/ficha/usado'],
-         filename: 'apps/page2/build/index.html'
-      })
-   ]
+   plugins: []
 }
